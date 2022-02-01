@@ -1,0 +1,64 @@
+﻿@page "/energy"
+
+
+<PageTitle>Energy</PageTitle>
+
+<h1>Energy Calculation:</h1>
+
+<EditForm Model="@energyParameters" OnValidSubmit="@HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <p>
+        <label>
+            <p>Mass:</p>
+            <InputNumber id="mass" title="mass" @bind-Value="energyParameters.Mass" /> <b>Kg</b>
+        </label>
+    </p>
+    <p>
+        <label>
+            <p>Speed:</p>
+            <InputNumber id="speed" title="speed" @bind-Value="energyParameters.Speed" /> <b>m/s^2</b>
+        </label>
+    </p>
+    <button class="btn-primary" type="submit">Submit</button>
+
+</EditForm>
+
+@if (lastCalculatedEnergy.HasValue)
+{
+    <div class="card">
+        <div class="card-title"><h5>Energy Value</h5></div>
+        <p>
+            <div class="card-body">@lastCalculatedEnergy <b>J</b></div>
+            <div class="card-body">@impact</div>
+        </p>
+    </div>
+}
+@if (@history.Count > 0)
+{
+    <button class="btn-primary" @onclick="@(() => Collapse())">
+        @if (collapsed)
+        {
+            <p>Show Previous Values</p>
+        }
+        else
+        {
+            <p>Hide Previous Values</p>
+        }
+    </button>
+    if (!collapsed)
+    {
+        <div class="card">
+            <div class="card-title"><h5>Previous Values</h5></div>
+
+            @foreach (var energyImpact in history)
+            {
+                <div class="card-body"><p>@energyImpact.Key <b>J</b></p></div>
+                <div class="card-body"><p>@energyImpact.Value</p></div>
+            }
+
+        </div>
+    }
+
+
+}
