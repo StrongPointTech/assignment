@@ -10,10 +10,14 @@ namespace API.Controllers
     {
         [HttpPost]
         [Route("calculate-energy")]
-        public ActionResult<EnergyCalculationModel> CalculateEnergy(EnergyCalculationModel model) {
-            model.Energy = EnergyCalculator.CalculateEnergy(model.Mass, model.Velocity);
+        public ActionResult<EnergyCalculationResponseModel> CalculateEnergy(EnergyCalculationRequestModel requestModel)
+        {
+            var responseModel = new EnergyCalculationResponseModel
+            {
+                Energy = EnergyCalculator.CalculateEnergy(requestModel.Mass, requestModel.Velocity),
+            };
 
-            return Ok(model);
+            return Ok(responseModel);
         }
     }
 }
