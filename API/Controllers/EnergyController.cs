@@ -12,12 +12,9 @@ namespace API.Controllers
         [Route("calculate-energy")]
         public ActionResult<EnergyCalculationResponseModel> CalculateEnergy(EnergyCalculationRequestModel requestModel)
         {
-            var responseModel = new EnergyCalculationResponseModel
-            {
-                Energy = EnergyCalculator.CalculateEnergy(requestModel.Mass, requestModel.Velocity),
-            };
+            var calculator = new EnergyCalculator(requestModel);
 
-            return Ok(responseModel);
+            return Ok(calculator.CalculateEnergyAndImpact());
         }
     }
 }
