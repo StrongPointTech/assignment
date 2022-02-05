@@ -11,7 +11,7 @@ namespace API.Models.Enums
         Megajoule,
 
         [EnumMember(Value = "BTU")]
-        BritishTermalUnit,
+        BritishThermalUnit,
 
         [EnumMember(Value = "cal")]
         Calorie,
