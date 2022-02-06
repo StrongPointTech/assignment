@@ -1,14 +1,15 @@
 .app {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
+  justify-content: start;
   background-image: linear-gradient(
-          135deg,
-          rgb(24, 42, 115) 0%,
-          rgb(33, 138, 174) 69%,
-          rgb(32, 167, 172) 89%
+    135deg,
+    rgb(24, 42, 115) 0%,
+    rgb(33, 138, 174) 69%,
+    rgb(32, 167, 172) 89%
   ) !important;
   height: 100vh;
+  padding-left: 10vw;
 }
 
 h1.header {
@@ -20,7 +21,7 @@ h1.header {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  max-width: 100%;
+  max-width: 1000%;
   width: 500px;
 }
 
@@ -28,6 +29,7 @@ h1.header {
   width: inherit;
   padding: 25px;
   background-color: white;
+  border-radius: 15px;
 }
 
 .form-group {
@@ -42,9 +44,30 @@ h1.header {
   padding-bottom: 10px;
 }
 
+.form-header {
+  color: gray;
+}
+
+.form-header > hr {
+  border-width: 0.5px;
+  margin-bottom: 0 !important;
+}
+
+.form-header > .second-column {
+  text-align: center;
+}
+
+.form-header > .third-column {
+  text-align: center;
+}
+
 .first-column {
   display: inline-block;
   width: 150px;
+}
+
+.first-column > i {
+  color: gray;
 }
 
 .second-column {
@@ -58,9 +81,10 @@ h1.header {
 }
 
 .second-column > input {
-  width: 225px;
+  width: 250px;
 }
 
 .third-column > select {
   width: 60px;
+  margin-left: 10px;
 }
