@@ -20,24 +20,44 @@ namespace API.Utilities
 
         public EnergyCalculationResponseModel CalculateEnergyAndImpact()
         {
-            var energy = CalculateEnergy();
+            var energyInJoules = CalculateEnergyInJoules();
 
             return new EnergyCalculationResponseModel
             {
-                Energy = energy,
+                Energy = energyInJoules.HasValue ?
+                    UnitConverter.ConvertEnergyUnitsToJoules(energyUnit, energyInJoules.Value) : null,
+                Impact = CalculateImpact(energyInJoules),
             };
         }
 
-        private double? CalculateEnergy()
+        private double? CalculateEnergyInJoules()
         {
             if (!mass.HasValue || !velocity.HasValue)
             {
                 return null;
             }
 
-            var energyInJoules = 0.5 * mass.Value * (velocity.Value * velocity.Value);
+            return 0.5 * mass.Value * (velocity.Value * velocity.Value);
+        }
 
-            return UnitConverter.ConvertEnergyUnitsToJoules(energyUnit, energyInJoules);
+        private string CalculateImpact(double? energy)
+        {
+            // This assumes that the energy is in joules
+
+            if (!energy.HasValue)
+            {
+                return "Error while calculating energy. Please check if all inputs are correct";
+            } else if (energy.Value < 0)
+            {
+                return "Error - negative energy cannot exist";
+            } else if (energy.Value == 0)
+            {
+                return "No impact as there's no energy";
+            } else
+            {
+                // TODO: Display proper message
+                return "Impact will be displayed here...";
+            }
         }
     }
 }
