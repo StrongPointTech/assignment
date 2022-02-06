@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import { EnergyCalculationRequestModel } from './models/energy-calculation-request-model';
 import { Field, Form, Formik } from 'formik';
+import axios, { AxiosResponse } from 'axios';
+import { EnergyCalculationResponseModel } from './models/energy-calculation-response-model';
 
 function App() {
   const requestModel: EnergyCalculationRequestModel = {
@@ -11,6 +13,13 @@ function App() {
     velocityUnit: "m/s",
     energyUnit: "J",
   };
+
+  async function handleFormSubmit(model: EnergyCalculationRequestModel) {
+    const result = await axios
+      .post<EnergyCalculationResponseModel>("https://localhost:7238/Energy/calculate-energy", model)
+      .then((response: AxiosResponse<EnergyCalculationResponseModel>) => response.data);
+    alert(JSON.stringify(result, null, 2));
+  }
   
   return (
     <div className="app">
@@ -20,15 +29,16 @@ function App() {
           <Formik
             initialValues={requestModel}
             onSubmit={(values, actions) => {
-              console.log({ values, actions });
-              alert(JSON.stringify(values, null, 2));
-              actions.setSubmitting(false);
+              handleFormSubmit(values);
             }}
           >
             <Form>
-              <span className="first-column">Measurement</span>
-              <span className="second-column">Value</span>
-              <span className="third-column">Unit</span>
+              <div className="form-header">
+                <span className="first-column">Measurement</span>
+                <span className="second-column">Value</span>
+                <span className="third-column">Unit</span>
+                <hr />
+              </div>
 
               <div className="form-group">
                 <label>
