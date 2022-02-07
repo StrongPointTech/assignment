@@ -9,15 +9,15 @@
     rgb(32, 167, 172) 89%
   ) !important;
   height: 100vh;
-  padding-left: 10vw;
 }
 
 h1.header {
   color: white;
 }
 
-.container {
+.calculator-container {
   display: flex;
+  flex: 40%;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -87,4 +87,38 @@ h1.header {
 .third-column > select {
   width: 60px;
   margin-left: 10px;
+}
+
+.results-container {
+  flex: 60%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.table-container {
+  background-color: white;
+  padding: 10px;
+  min-height: 250px;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+table {
+  border-spacing: 0;
+  border: 1px solid gray;
+}
+
+th, td {
+  border-bottom: 0.5px solid gray;
+  border-right: 0.5px solid gray;
+  padding: 5px;
+}
+
+th {
+  text-align: center;
+}
+
+th:last-child, td:last-child {
+  border-right: 0.5px solid gray;
 }

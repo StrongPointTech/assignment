@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import { EnergyCalculationRequestModel } from './models/energy-calculation-request-model';
 import { Field, Form, Formik } from 'formik';
 import axios, { AxiosResponse } from 'axios';
 import { EnergyCalculationResponseModel } from './models/energy-calculation-response-model';
+import { EnergyCalculationModel } from './models/energy-calculation-model';
 
 function App() {
   const requestModel: EnergyCalculationRequestModel = {
@@ -14,21 +15,34 @@ function App() {
     energyUnit: "J",
   };
 
+  const [results, updateResults] = useState<EnergyCalculationModel[]>([]);
+
   async function handleFormSubmit(model: EnergyCalculationRequestModel) {
-    const result = await axios
+    const responseModel = await axios
       .post<EnergyCalculationResponseModel>("https://localhost:7238/Energy/calculate-energy", model)
       .then((response: AxiosResponse<EnergyCalculationResponseModel>) => response.data);
-    alert(JSON.stringify(result, null, 2));
+
+    const result: EnergyCalculationModel = {
+      mass: model.mass,
+      massUnit: model.massUnit,
+      velocity: model.velocity,
+      velocityUnit: model.velocityUnit,
+      energy: responseModel.energy,
+      energyUnit: model.energyUnit,
+      impact: responseModel.impact,
+    };
+
+    updateResults([result, ...results]);
   }
   
   return (
     <div className="app">
-      <div className="container">
+      <div className="calculator-container">
         <h1 className="header">Kinetic Energy calculator</h1>
         <div className="form-container">
           <Formik
             initialValues={requestModel}
-            onSubmit={(values, actions) => {
+            onSubmit={(values) => {
               handleFormSubmit(values);
             }}
           >
@@ -98,6 +112,38 @@ function App() {
               <button type="submit">Calculate</button>
             </Form>
           </Formik>
+        </div>
+      </div>
+
+      <div className="results-container">
+        <h3>Results</h3>
+        <div className="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th style={{width: 50}}>Masss</th>
+                <th style={{width: 20}}>Mass Unit</th>
+                <th style={{width: 50}}>Velocity</th>
+                <th style={{width: 20}}>Velocity Unit</th>
+                <th style={{width: 50}}>Energy</th>
+                <th style={{width: 20}}>Energy Unit</th>
+                <th style={{width: 500}}>Impact</th>
+              </tr>
+            </thead>
+            <tbody>
+              {results.map((result, index) => (
+                <tr key={index}>
+                  <td>{result.mass}</td>
+                  <td>{result.massUnit}</td>
+                  <td>{result.velocity}</td>
+                  <td>{result.velocityUnit}</td>
+                  <td>{result.energy}</td>
+                  <td>{result.energyUnit}</td>
+                  <td>{result.impact}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
