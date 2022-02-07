@@ -116,13 +116,6 @@ table {
   overflow-y: scroll;
   border-spacing: 0;
   border: 1px solid gray;
-  height: inherit;
-}
-
-tbody {
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 10em;
 }
 
 th, td {

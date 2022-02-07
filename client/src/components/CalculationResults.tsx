@@ -15,13 +15,13 @@ export default function CalculationResults({results}: Props) {
             <table>
               <thead>
                 <tr>
-                  <th style={{width: 50}}>Masss</th>
-                  <th style={{width: 20}}>Mass Unit</th>
-                  <th style={{width: 50}}>Velocity</th>
-                  <th style={{width: 20}}>Velocity Unit</th>
-                  <th style={{width: 50}}>Energy</th>
-                  <th style={{width: 20}}>Energy Unit</th>
-                  <th style={{width: 500}}>Impact</th>
+                  <th style={{width: "10%"}}>Masss</th>
+                  <th style={{width: "5%"}}>Mass Unit</th>
+                  <th style={{width: "10%"}}>Velocity</th>
+                  <th style={{width: "5%"}}>Velocity Unit</th>
+                  <th style={{width: "10%"}}>Energy</th>
+                  <th style={{width: "5%"}}>Energy Unit</th>
+                  <th style={{width: "55%"}}>Impact</th>
                 </tr>
               </thead>
               <tbody>
