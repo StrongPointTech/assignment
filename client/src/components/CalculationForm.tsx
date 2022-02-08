@@ -36,6 +36,16 @@ export default function CacluationForm({addNewResult, clearResults}: Props) {
 
     addNewResult(result);
   }
+
+  function validateValue(value: number | undefined) {
+    let error = "";
+
+    if (!value) {
+      error = "Value is required";
+    }
+
+    return error;
+  }
   
   return (
     <div className="calculator-container">
@@ -47,72 +57,76 @@ export default function CacluationForm({addNewResult, clearResults}: Props) {
             handleFormSubmit(values);
           }}
         >
-          <Form>
-            <div className="form-header">
-              <span className="first-column">Measurement</span>
-              <span className="second-column">Value</span>
-              <span className="third-column">Unit</span>
-              <hr />
-            </div>
+          {({errors, touched, isValid}) => (
+            <Form>
+              <div className="form-header">
+                <span className="first-column">Measurement</span>
+                <span className="second-column">Value</span>
+                <span className="third-column">Unit</span>
+                <hr />
+              </div>
 
-            <div className="form-group">
-              <label>
-                <span className="first-column">
-                  <i>energy</i> m =
-                </span>
-                <span className="second-column">
-                  <Field type="number" name="mass" placeholder="Mass" />
-                </span>
-                <span className="third-column">
-                  <Field as="select" name="massUnit">
-                    <option value="kg">kg</option>
-                    <option value="g">g</option>
-                    <option value="oz">oz</option>
-                    <option value="lb">lb</option>
-                  </Field>
-                </span>
-              </label>
-            </div>
-                
-            <div className="form-group">
-              <label>
-                <span className="first-column">
-                  <i>velocity</i> v =
-                </span>
-                <span className="second-column">
-                  <Field type="number" name="velocity" placeholder="Velocity" />
-                </span>
-                <span className="third-column">
-                  <Field as="select" name="velocityUnit">
-                    <option value="m/s">m/s</option>
-                    <option value="km/h">km/h</option>
-                    <option value="ft/s">ft/s</option>
-                    <option value="mi/h">mi/h</option>
-                  </Field>
-                </span>
-              </label>
-            </div>
+              <div className="form-group">
+                <label>
+                  <span className="first-column">
+                    <i>energy</i> m =
+                  </span>
+                  <span className="second-column">
+                    <Field type="number" name="mass" placeholder="Mass" validate={validateValue} />
+                    {errors.mass && touched.mass && <small style={{color: "red"}}>{errors.mass}</small>}
+                  </span>
+                  <span className="third-column">
+                    <Field as="select" name="massUnit">
+                      <option value="kg">kg</option>
+                      <option value="g">g</option>
+                      <option value="oz">oz</option>
+                      <option value="lb">lb</option>
+                    </Field>
+                  </span>
+                </label>
+              </div>
+                  
+              <div className="form-group">
+                <label>
+                  <span className="first-column">
+                    <i>velocity</i> v =
+                  </span>
+                  <span className="second-column">
+                    <Field type="number" name="velocity" placeholder="Velocity" validate={validateValue} />
+                    {errors.velocity && touched.velocity && <small style={{color: "red"}}>{errors.velocity}</small>}
+                  </span>
+                  <span className="third-column">
+                    <Field as="select" name="velocityUnit">
+                      <option value="m/s">m/s</option>
+                      <option value="km/h">km/h</option>
+                      <option value="ft/s">ft/s</option>
+                      <option value="mi/h">mi/h</option>
+                    </Field>
+                  </span>
+                </label>
+              </div>
 
-            <div className="form-group">
-              <label>
-                <span className="first-column">
-                  <i>energy</i> KE =
-                </span>
-                <span className="second-column"></span>
-                <span className="third-column">
-                  <Field as="select" name="energyUnit">
-                    <option value="J">J</option>
-                    <option value="MJ">MJ</option>
-                    <option value="BTU">BTU</option>
-                    <option value="cal">cal</option>
-                  </Field>
-                </span>
-              </label>
-            </div>
+              <div className="form-group">
+                <label>
+                  <span className="first-column">
+                    <i>energy</i> KE =
+                  </span>
+                  <span className="second-column"></span>
+                  <span className="third-column">
+                    <Field as="select" name="energyUnit">
+                      <option value="J">J</option>
+                      <option value="MJ">MJ</option>
+                      <option value="BTU">BTU</option>
+                      <option value="cal">cal</option>
+                    </Field>
+                  </span>
+                </label>
+              </div>
 
-            <button type="submit">Calculate</button>
-            <button type="button" style={{float: "right"}} onClick={clearResults}>Clear results</button>
-          </Form>
+              <button type="submit" disabled={!isValid}>Calculate</button>
+              <button type="button" style={{float: "right"}} onClick={clearResults}>Clear results</button>
+            </Form>
+          )}
         </Formik>
       </div>
     </div>
