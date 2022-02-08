@@ -10,10 +10,14 @@ function App() {
   function addNewResult(result: EnergyCalculationModel) {
     updateResults([result, ...results]);
   }
+
+  function clearResults() {
+    updateResults([]);
+  }
   
   return (
     <div className="app">
-      <CacluationForm addNewResult={addNewResult} />
+      <CacluationForm addNewResult={addNewResult} clearResults={clearResults} />
       <CalculationResults results={results} />
     </div>
   );

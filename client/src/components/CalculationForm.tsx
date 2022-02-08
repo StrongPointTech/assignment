@@ -7,9 +7,10 @@ import { EnergyCalculationResponseModel } from "../models/energy-calculation-res
 
 interface Props {
   addNewResult: (result: EnergyCalculationModel) => void;
+  clearResults: () => void;
 }
 
-export default function CacluationForm({addNewResult}: Props) {
+export default function CacluationForm({addNewResult, clearResults}: Props) {
   const requestModel: EnergyCalculationRequestModel = {
     mass: 0,
     massUnit: "kg",
@@ -110,6 +111,7 @@ export default function CacluationForm({addNewResult}: Props) {
             </div>
 
             <button type="submit">Calculate</button>
+            <button type="button" style={{float: "right"}} onClick={clearResults}>Clear results</button>
           </Form>
         </Formik>
       </div>
