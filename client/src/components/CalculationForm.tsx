@@ -38,13 +38,11 @@ export default function CacluationForm({addNewResult, clearResults}: Props) {
   }
 
   function validateValue(value: number | undefined) {
-    let error = "";
-
-    if (!value) {
-      error = "Value is required";
+    if (!!value || value === 0) {
+      return "";
     }
 
-    return error;
+    return "Value is required";
   }
   
   return (
