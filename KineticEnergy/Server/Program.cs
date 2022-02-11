@@ -1,3 +1,4 @@
+using KineticEnergy.Server;
 using KineticEnergy.Server.Interfaces;
 using KineticEnergy.Server.Services;
 using Microsoft.AspNetCore.ResponseCompression;
@@ -8,7 +9,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
-builder.Services.AddScoped<IEnergyCalculationService, EnergyCalculationService>();
+builder.Services.AddLogging().AddTransient<CancelationHandling>();
+builder.Services.AddSingleton<ICacheService, CacheService>();
+builder.Services.AddTransient<IEnergyCalculationService, EnergyCalculationService>();
 
 var app = builder.Build();
 
@@ -24,13 +27,16 @@ else
     app.UseHsts();
 }
 
+
+
 app.UseHttpsRedirection();
 
 app.UseBlazorFrameworkFiles();
 app.UseStaticFiles();
 
-app.UseRouting();
+app.UseMiddleware<CancelationHandling>();
 
+app.UseRouting();
 
 app.MapRazorPages();
 app.MapControllers();

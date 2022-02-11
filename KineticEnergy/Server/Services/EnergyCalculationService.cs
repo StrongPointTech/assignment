@@ -4,15 +4,9 @@ namespace KineticEnergy.Server.Services;
 
 public class EnergyCalculationService : IEnergyCalculationService
 {
-    public double CalculateEnergy(double mass, double speed)
-    {
-        return 0.5 * mass * speed * speed;
-    }
+    public double CalculateEnergy(double mass, double speed) => 0.5 * mass * speed * speed;
 
-    public async Task<string> CalculateImpact(double energy)
-    {
-        return await Task.Run(() => Impacts(energy));
-    }
+    public async Task<string> CalculateImpact(double energy, CancellationToken cancellationToken) => await Task.Run(() => Impacts(energy), cancellationToken);
 
     private string Impacts(double energy)
     {

@@ -1,8 +1,8 @@
-﻿namespace KineticEnergy.Server.Interfaces
+﻿namespace KineticEnergy.Server.Interfaces;
+
+public interface IEnergyCalculationService
 {
-    public interface IEnergyCalculationService
-    {
-        public double CalculateEnergy(double mass, double speed);
-        public Task<string> CalculateImpact(double energy);
-    }
+    public double CalculateEnergy(double mass, double speed);
+    public Task<string> CalculateImpact(double energy, CancellationToken cancellationToken);
 }
+
