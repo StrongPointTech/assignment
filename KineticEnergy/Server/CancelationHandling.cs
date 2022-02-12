@@ -17,11 +17,13 @@ public class CancelationHandling : IMiddleware
         }
         catch (TaskCanceledException e)
         {
-            _logger.LogInformation(message: $"Task cancelled: {e.Task?.ToString()}");
+            if(_logger.IsEnabled(LogLevel.Information))
+                _logger.LogInformation("Task cancelled: {0}", e.Task?.ToString());
         }
         catch (OperationCanceledException)
         {
-            _logger.LogInformation($"Operation cancelled");
+            if (_logger.IsEnabled(LogLevel.Information))
+                _logger.LogInformation($"Operation cancelled");
         }
 
     }
