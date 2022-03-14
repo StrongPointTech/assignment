@@ -1,0 +1,102 @@
+﻿@page "/HistoricalRecodrs"
+@inject IRecordService recordService
+
+<PageTitle>Impact Calculator 3000</PageTitle>
+
+
+@if (data == null || !data.Any())
+{
+    <div>No Records</div>
+}
+else
+{
+    <h1 class="d-flex justify-content-center text-capitalize text-black-50 my-5 ">Historical Records</h1>
+    <div class="container">
+        <table class="table">
+            <thead class="bg-success ">
+            <th class=" mx-2">
+                @nameof(RecordViewModel.Mass)
+                <select value=@massUnit  onchange="@ChangeUnit" class="form-control bg-success  " style="width: 50px">
+                    @foreach (var item in Enum.GetValues<MassUnit>())
+                    {
+                        <option value=@item>@(Enum.GetName(item)) </option>
+                    }
+                </select>
+            </th>
+            <th class="mx-2 ">
+                @nameof(RecordViewModel.Velocity) 
+                <select value=@velocityUnit onchange="@ChangeUnit" class="form-control bg-success  " style="width: 50px">
+                    @foreach (var item in Enum.GetValues<VelocityUnit>())
+                    {
+                        <option value=@item>@(item.GetType()?
+                                                .GetMember(item.ToString())?
+                                                .First()?
+                                                .GetCustomAttribute<DisplayAttribute>()?
+                                                .Name) </option>
+                    }
+                </select>
+            </th>
+            <th class=" mx-2 ">
+                @nameof(RecordViewModel.Energy)
+                <select value=@energyUnit onchange="@ChangeUnit" class="form-control bg-success  " style="width: 50px"> 
+                    @foreach (var item in Enum.GetValues<EnergyUnit>())
+                    {
+                        <option value=@item>@(Enum.GetName(item)) </option>
+                    }
+                </select> 
+            </th>
+            <th>
+                @nameof(RecordViewModel.ImpactResult)
+            </th>
+            </thead>
+            <tbody>
+            @foreach (var item in data)
+            {
+                <tr>
+                    <td>@item.Mass</td>
+                    <td>@item.Velocity</td>
+                    <td>@item.Energy</td>
+                    <td>@item.ImpactResult</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+}
+
+
+@code {
+    List<RecordViewModel> data;
+    MassUnit massUnit = MassUnit.kg;
+    VelocityUnit velocityUnit = VelocityUnit.MetersPerSecond;
+    EnergyUnit energyUnit = EnergyUnit.J;
+    
+ 
+    protected override async Task OnInitializedAsync()
+    {
+        await GetData();
+    }
+
+    private async Task GetData()
+    {
+        data = await recordService.GetAllRecordsAsync(massUnit, velocityUnit, energyUnit);
+    }
+
+    private async Task ChangeUnit(ChangeEventArgs arg)
+    {
+
+        if (Enum.TryParse<MassUnit>(arg.Value.ToString(), out var changedMassUnit))
+            massUnit = changedMassUnit;
+            
+        else if (Enum.TryParse<VelocityUnit>(arg.Value.ToString(), out var changedVelocityUnit))
+            velocityUnit = changedVelocityUnit;
+        else
+        {
+            Enum.TryParse<EnergyUnit>(arg.Value.ToString(), out var changedEnergyUnit);
+            energyUnit = changedEnergyUnit;
+        }
+            
+        
+        await GetData();
+    }
+}

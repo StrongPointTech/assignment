@@ -9,15 +9,15 @@ namespace AssignmentApi.Controllers
     [ApiController]
     public class CalculatorController : ControllerBase
     {
-        private IRecordService recordService;
+        private readonly IRecordService recordService;
 
         public CalculatorController(IRecordService recordService)
         {
             this.recordService = recordService;
         }
 
-        [HttpGet("{massUnit}/{velocityUnit}/{energyUnit}")]
-        public ActionResult<List<RecordViewModel>> Get(MassUnit massUnit, VelocityUnit velocityUnit, EnergyUnit energyUnit)
+        [HttpGet]
+        public ActionResult<List<RecordViewModel>> Get([FromQuery]MassUnit massUnit, [FromQuery]VelocityUnit velocityUnit, [FromQuery]EnergyUnit energyUnit)
         {
             return Ok(recordService.GetAllRecords(massUnit, velocityUnit, energyUnit));
         }
@@ -25,8 +25,7 @@ namespace AssignmentApi.Controllers
         [HttpPost]
         public ActionResult Post([FromBody] RecordViewModel model)
         {
-            recordService.CreateRecord(model);
-            return StatusCode(201);
+            return Ok(recordService.CreateRecord(model));
         }
     }
 }

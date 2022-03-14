@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "P+9S/kCgSzs1nkv/pxXUhPc/hOxLb54N+ZfbxnJ0uFI=",
+  "Hash": "gLqZUtBzrK3BqAI4zS7ib4tp7bOV5sYCgW77sDDwNmM=",
   "Source": "AssignmentBlazor",
   "BasePath": "/",
   "Mode": "Root",
@@ -49,6 +49,40 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj\\Debug\\net6.0\\AssignmentBlazor.pdb"
+    },
+    {
+      "Identity": "C:\\Users\\cibir\\Desktop\\New folder\\assignment\\AssignmentBlazor\\bin\\Debug\\net6.0\\wwwroot\\_framework\\AssignmentLibrary.dll",
+      "SourceId": "AssignmentBlazor",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\cibir\\Desktop\\New folder\\assignment\\AssignmentBlazor\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/AssignmentLibrary.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\cibir\\Desktop\\New folder\\assignment\\AssignmentLibrary\\bin\\Debug\\net6.0\\AssignmentLibrary.dll"
+    },
+    {
+      "Identity": "C:\\Users\\cibir\\Desktop\\New folder\\assignment\\AssignmentBlazor\\bin\\Debug\\net6.0\\wwwroot\\_framework\\AssignmentLibrary.pdb",
+      "SourceId": "AssignmentBlazor",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\cibir\\Desktop\\New folder\\assignment\\AssignmentBlazor\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/AssignmentLibrary.pdb",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "symbol",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\cibir\\Desktop\\New folder\\assignment\\AssignmentLibrary\\bin\\Debug\\net6.0\\AssignmentLibrary.pdb"
     },
     {
       "Identity": "C:\\Users\\cibir\\Desktop\\New folder\\assignment\\AssignmentBlazor\\bin\\Debug\\net6.0\\wwwroot\\_framework\\blazor.boot.json",
@@ -136,23 +170,6 @@
       "OriginalItemSpec": "C:\\Users\\cibir\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.2\\runtimes\\browser-wasm\\native\\dotnet.wasm"
     },
     {
-      "Identity": "C:\\Users\\cibir\\Desktop\\New folder\\assignment\\AssignmentBlazor\\bin\\Debug\\net6.0\\wwwroot\\_framework\\icudt.dat",
-      "SourceId": "AssignmentBlazor",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\cibir\\Desktop\\New folder\\assignment\\AssignmentBlazor\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/icudt.dat",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "BlazorWebAssemblyResource",
-      "AssetTraitValue": "native",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\cibir\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.2\\runtimes\\browser-wasm\\native\\icudt.dat"
-    },
-    {
       "Identity": "C:\\Users\\cibir\\Desktop\\New folder\\assignment\\AssignmentBlazor\\bin\\Debug\\net6.0\\wwwroot\\_framework\\icudt_CJK.dat",
       "SourceId": "AssignmentBlazor",
       "SourceType": "Computed",
@@ -202,6 +219,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\cibir\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.2\\runtimes\\browser-wasm\\native\\icudt_no_CJK.dat"
+    },
+    {
+      "Identity": "C:\\Users\\cibir\\Desktop\\New folder\\assignment\\AssignmentBlazor\\bin\\Debug\\net6.0\\wwwroot\\_framework\\icudt.dat",
+      "SourceId": "AssignmentBlazor",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\cibir\\Desktop\\New folder\\assignment\\AssignmentBlazor\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/icudt.dat",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "native",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\cibir\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.2\\runtimes\\browser-wasm\\native\\icudt.dat"
     },
     {
       "Identity": "C:\\Users\\cibir\\Desktop\\New folder\\assignment\\AssignmentBlazor\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll",
@@ -4624,6 +4658,23 @@
       "OriginalItemSpec": "C:\\Users\\cibir\\Desktop\\New folder\\assignment\\AssignmentBlazor\\bin\\Debug\\net6.0\\wwwroot\\_framework\\icudt.dat"
     },
     {
+      "Identity": "C:\\Users\\cibir\\Desktop\\New folder\\assignment\\AssignmentBlazor\\obj\\Debug\\net6.0\\build-gz\\dxcWJW6R.gz",
+      "SourceId": "AssignmentBlazor",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\cibir\\Desktop\\New folder\\assignment\\AssignmentBlazor\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/AssignmentLibrary.pdb.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\cibir\\Desktop\\New folder\\assignment\\AssignmentBlazor\\bin\\Debug\\net6.0\\wwwroot\\_framework\\AssignmentLibrary.pdb",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\cibir\\Desktop\\New folder\\assignment\\AssignmentBlazor\\bin\\Debug\\net6.0\\wwwroot\\_framework\\AssignmentLibrary.pdb"
+    },
+    {
       "Identity": "C:\\Users\\cibir\\Desktop\\New folder\\assignment\\AssignmentBlazor\\obj\\Debug\\net6.0\\build-gz\\E41rHP67.gz",
       "SourceId": "AssignmentBlazor",
       "SourceType": "Computed",
@@ -4911,6 +4962,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\cibir\\Desktop\\New folder\\assignment\\AssignmentBlazor\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.Json.dll"
+    },
+    {
+      "Identity": "C:\\Users\\cibir\\Desktop\\New folder\\assignment\\AssignmentBlazor\\obj\\Debug\\net6.0\\build-gz\\iDXsvdR0.gz",
+      "SourceId": "AssignmentBlazor",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\cibir\\Desktop\\New folder\\assignment\\AssignmentBlazor\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/AssignmentLibrary.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\cibir\\Desktop\\New folder\\assignment\\AssignmentBlazor\\bin\\Debug\\net6.0\\wwwroot\\_framework\\AssignmentLibrary.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\cibir\\Desktop\\New folder\\assignment\\AssignmentBlazor\\bin\\Debug\\net6.0\\wwwroot\\_framework\\AssignmentLibrary.dll"
     },
     {
       "Identity": "C:\\Users\\cibir\\Desktop\\New folder\\assignment\\AssignmentBlazor\\obj\\Debug\\net6.0\\build-gz\\IgAnOIBy.gz",
@@ -6885,6 +6953,23 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
+      "Identity": "C:\\Users\\cibir\\Desktop\\New folder\\assignment\\AssignmentBlazor\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "SourceId": "AssignmentBlazor",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\cibir\\Desktop\\New folder\\assignment\\AssignmentBlazor\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "css/open-iconic/FONT-LICENSE",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
+    },
+    {
       "Identity": "C:\\Users\\cibir\\Desktop\\New folder\\assignment\\AssignmentBlazor\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "AssignmentBlazor",
       "SourceType": "Discovered",
@@ -6985,23 +7070,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
-    },
-    {
-      "Identity": "C:\\Users\\cibir\\Desktop\\New folder\\assignment\\AssignmentBlazor\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
-      "SourceId": "AssignmentBlazor",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cibir\\Desktop\\New folder\\assignment\\AssignmentBlazor\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "css/open-iconic/FONT-LICENSE",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
       "Identity": "C:\\Users\\cibir\\Desktop\\New folder\\assignment\\AssignmentBlazor\\wwwroot\\css\\open-iconic\\ICON-LICENSE",

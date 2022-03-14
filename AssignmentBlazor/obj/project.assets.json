@@ -390,6 +390,16 @@
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
         }
+      },
+      "AssignmentLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/AssignmentLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AssignmentLibrary.dll": {}
+        }
       }
     },
     "net6.0/browser-wasm": {
@@ -774,6 +784,16 @@
         },
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
+      "AssignmentLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/AssignmentLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AssignmentLibrary.dll": {}
         }
       }
     }
@@ -1537,10 +1557,16 @@
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "AssignmentLibrary/1.0.0": {
+      "type": "project",
+      "path": "../AssignmentLibrary/AssignmentLibrary.csproj",
+      "msbuildProject": "../AssignmentLibrary/AssignmentLibrary.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "AssignmentLibrary >= 1.0.0",
       "Microsoft.AspNetCore.Components.WebAssembly >= 6.0.2",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 6.0.2"
     ]
@@ -1571,7 +1597,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\cibir\\Desktop\\New folder\\assignment\\AssignmentLibrary\\AssignmentLibrary.csproj": {
+              "projectPath": "C:\\Users\\cibir\\Desktop\\New folder\\assignment\\AssignmentLibrary\\AssignmentLibrary.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

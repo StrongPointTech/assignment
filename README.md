@@ -1,10 +1,18 @@
-# Assignment
-- write and app where you enter mass and velocity of an object and the app would calculate the energy that object would have. The results should include the
-comment/note/whatever that would tell what would happen to Earth if that object hit our beloved planet. It should be possible to view previous results.
+## Impact Calculator 3000
 
-- frontend in any web library/framework, preferably Angular
-- backend any framework, preferably .NET C#
+    Calculates objecty energy by given mass and velocity and what impact it will have on the planet earht. Saves records. 
 
-## Notes and references
-- what matters most is the candidate's creativity and how he/she is able to write awsome, readable, structurised, testable code.
-- https://www.calculatorsoup.com/calculators/physics/kinetic.php
+## 2.Start the project
+
+- Star back end
+  
+  ../assignment\AssignmentApi> dotnet run 
+  
+
+- start front end
+  
+ ../assignment\AssignmentBlazor> dotnet run 
+
+
+Go to https://localhost:7191/
+enjoy

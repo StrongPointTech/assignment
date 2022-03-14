@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AssignmentApi.Migrations
 {
     [DbContext(typeof(AssignmentDb))]
-    [Migration("20220304171310_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20220307192125_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -31,17 +31,20 @@ namespace AssignmentApi.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<decimal>("Energy")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<double>("Energy")
+                        .HasPrecision(25, 2)
+                        .HasColumnType("float(25)");
 
                     b.Property<string>("ImpactResult")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal>("Mass")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<double>("Mass")
+                        .HasPrecision(25, 2)
+                        .HasColumnType("float(25)");
 
-                    b.Property<decimal>("Velocity")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<double>("Velocity")
+                        .HasPrecision(25, 2)
+                        .HasColumnType("float(25)");
 
                     b.HasKey("Id");
 

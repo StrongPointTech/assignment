@@ -2,8 +2,8 @@
 {
     public enum MassUnit
     {
-        t,
         kg,
+        t,
         g,
         oz,
         lb

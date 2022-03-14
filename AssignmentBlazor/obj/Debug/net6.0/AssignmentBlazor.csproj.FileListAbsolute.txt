@@ -1,5 +1,7 @@
 C:\Users\cibir\Desktop\New folder\assignment\AssignmentBlazor\bin\Debug\net6.0\wwwroot\_framework\AssignmentBlazor.dll
 C:\Users\cibir\Desktop\New folder\assignment\AssignmentBlazor\bin\Debug\net6.0\wwwroot\_framework\AssignmentBlazor.pdb
+C:\Users\cibir\Desktop\New folder\assignment\AssignmentBlazor\bin\Debug\net6.0\wwwroot\_framework\AssignmentLibrary.dll
+C:\Users\cibir\Desktop\New folder\assignment\AssignmentBlazor\bin\Debug\net6.0\wwwroot\_framework\AssignmentLibrary.pdb
 C:\Users\cibir\Desktop\New folder\assignment\AssignmentBlazor\bin\Debug\net6.0\wwwroot\_framework\blazor.boot.json
 C:\Users\cibir\Desktop\New folder\assignment\AssignmentBlazor\bin\Debug\net6.0\wwwroot\_framework\blazor.webassembly.js
 C:\Users\cibir\Desktop\New folder\assignment\AssignmentBlazor\bin\Debug\net6.0\wwwroot\_framework\dotnet.6.0.2.bwvbhwbdm0.js
@@ -269,6 +271,7 @@ C:\Users\cibir\Desktop\New folder\assignment\AssignmentBlazor\bin\Debug\net6.0\w
 C:\Users\cibir\Desktop\New folder\assignment\AssignmentBlazor\bin\Debug\net6.0\wwwroot\_framework\System.AppContext.dll.gz
 C:\Users\cibir\Desktop\New folder\assignment\AssignmentBlazor\bin\Debug\net6.0\wwwroot\_framework\System.Runtime.Numerics.dll.gz
 C:\Users\cibir\Desktop\New folder\assignment\AssignmentBlazor\bin\Debug\net6.0\wwwroot\_framework\icudt.dat.gz
+C:\Users\cibir\Desktop\New folder\assignment\AssignmentBlazor\bin\Debug\net6.0\wwwroot\_framework\AssignmentLibrary.pdb.gz
 C:\Users\cibir\Desktop\New folder\assignment\AssignmentBlazor\bin\Debug\net6.0\wwwroot\_framework\System.Xml.Linq.dll.gz
 C:\Users\cibir\Desktop\New folder\assignment\AssignmentBlazor\bin\Debug\net6.0\wwwroot\_framework\System.Security.Claims.dll.gz
 C:\Users\cibir\Desktop\New folder\assignment\AssignmentBlazor\bin\Debug\net6.0\wwwroot\_framework\System.Security.AccessControl.dll.gz
@@ -286,6 +289,7 @@ C:\Users\cibir\Desktop\New folder\assignment\AssignmentBlazor\bin\Debug\net6.0\w
 C:\Users\cibir\Desktop\New folder\assignment\AssignmentBlazor\bin\Debug\net6.0\wwwroot\_framework\System.Net.NameResolution.dll.gz
 C:\Users\cibir\Desktop\New folder\assignment\AssignmentBlazor\bin\Debug\net6.0\wwwroot\_framework\Microsoft.Extensions.DependencyInjection.dll.gz
 C:\Users\cibir\Desktop\New folder\assignment\AssignmentBlazor\bin\Debug\net6.0\wwwroot\_framework\Microsoft.Extensions.Configuration.Json.dll.gz
+C:\Users\cibir\Desktop\New folder\assignment\AssignmentBlazor\bin\Debug\net6.0\wwwroot\_framework\AssignmentLibrary.dll.gz
 C:\Users\cibir\Desktop\New folder\assignment\AssignmentBlazor\bin\Debug\net6.0\wwwroot\_framework\System.ComponentModel.dll.gz
 C:\Users\cibir\Desktop\New folder\assignment\AssignmentBlazor\bin\Debug\net6.0\wwwroot\_framework\System.Numerics.dll.gz
 C:\Users\cibir\Desktop\New folder\assignment\AssignmentBlazor\bin\Debug\net6.0\wwwroot\_framework\System.Diagnostics.Tools.dll.gz
@@ -596,6 +600,8 @@ C:\Users\cibir\Desktop\New folder\assignment\AssignmentBlazor\bin\Debug\net6.0\i
 C:\Users\cibir\Desktop\New folder\assignment\AssignmentBlazor\bin\Debug\net6.0\icudt_CJK.dat
 C:\Users\cibir\Desktop\New folder\assignment\AssignmentBlazor\bin\Debug\net6.0\icudt_EFIGS.dat
 C:\Users\cibir\Desktop\New folder\assignment\AssignmentBlazor\bin\Debug\net6.0\icudt_no_CJK.dat
+C:\Users\cibir\Desktop\New folder\assignment\AssignmentBlazor\bin\Debug\net6.0\AssignmentLibrary.dll
+C:\Users\cibir\Desktop\New folder\assignment\AssignmentBlazor\bin\Debug\net6.0\AssignmentLibrary.pdb
 C:\Users\cibir\Desktop\New folder\assignment\AssignmentBlazor\obj\Debug\net6.0\AssignmentBlazor.csproj.AssemblyReference.cache
 C:\Users\cibir\Desktop\New folder\assignment\AssignmentBlazor\obj\Debug\net6.0\AssignmentBlazor.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\cibir\Desktop\New folder\assignment\AssignmentBlazor\obj\Debug\net6.0\AssignmentBlazor.AssemblyInfoInputs.cache
@@ -798,6 +804,8 @@ C:\Users\cibir\Desktop\New folder\assignment\AssignmentBlazor\obj\Debug\net6.0\b
 C:\Users\cibir\Desktop\New folder\assignment\AssignmentBlazor\obj\Debug\net6.0\build-gz\raFVfJFF.gz
 C:\Users\cibir\Desktop\New folder\assignment\AssignmentBlazor\obj\Debug\net6.0\build-gz\IPcKIx6e.gz
 C:\Users\cibir\Desktop\New folder\assignment\AssignmentBlazor\obj\Debug\net6.0\build-gz\z7QGLMZS.gz
+C:\Users\cibir\Desktop\New folder\assignment\AssignmentBlazor\obj\Debug\net6.0\build-gz\iDXsvdR0.gz
+C:\Users\cibir\Desktop\New folder\assignment\AssignmentBlazor\obj\Debug\net6.0\build-gz\dxcWJW6R.gz
 C:\Users\cibir\Desktop\New folder\assignment\AssignmentBlazor\obj\Debug\net6.0\build-gz\2BeWPXAH.gz
 C:\Users\cibir\Desktop\New folder\assignment\AssignmentBlazor\obj\Debug\net6.0\build-gz\cfKMZ5Il.gz
 C:\Users\cibir\Desktop\New folder\assignment\AssignmentBlazor\obj\Debug\net6.0\build-gz\YlanlqCo.gz
