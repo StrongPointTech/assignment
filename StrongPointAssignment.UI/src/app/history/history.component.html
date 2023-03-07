@@ -1,0 +1,19 @@
+<div class="container">
+    <table class="table" *ngIf="objectList && objectList.length > 0">
+        <thead>
+            <tr>
+                <th scope="col">Mass</th>
+                <th scope="col">Velocity</th>
+                <th scope="col">Energy</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let object of objectList">
+                <td>{{ object.mass }}</td>
+                <td>{{ object.velocity }}</td>
+                <td>{{ object.energy }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <p *ngIf="!objectList || objectList.length <= 0">No history to display</p>
+</div>

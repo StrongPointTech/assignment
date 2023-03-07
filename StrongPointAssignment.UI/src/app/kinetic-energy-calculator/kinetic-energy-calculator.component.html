@@ -1,0 +1,27 @@
+<div class="container d-grid gap-3 p-3">
+    <form #form="ngForm" (ngSubmit)="calculateEnergy()">
+        <div class="mb-3">
+            <label for="targetObjectMass" class="form-label">Target object mass</label>
+            <input type="number" class="form-control" id="targetObjectMass" name="mass" [(ngModel)] = "targetObject.mass">
+        </div>
+        <div class="mb-3">
+            <label for="targerObjectVelocity" class="form-label">Targer object velocity</label>
+            <input type="number" class="form-control" id="targerObjectVelocity" name="velocity" [(ngModel)] = "targetObject.velocity">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <p class="mt-1"><b>Calculated kinetic energy:</b></p>
+    <div class="card" *ngIf="targetObject.id != ''">
+        <div class="card-body">
+            {{targetObject.energy}}
+        </div>
+    </div>
+    <div *ngIf="selectedMessage != ''">
+        <p class="mt-1"><b>What would happen if this object hit the earth</b></p>
+        <div class="card">
+            <div class="card-body">
+                {{selectedMessage}}
+            </div>
+        </div>
+    </div>
+</div>

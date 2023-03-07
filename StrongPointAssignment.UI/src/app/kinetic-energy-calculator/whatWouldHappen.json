@@ -1,0 +1,34 @@
+[
+    {
+        "energy": 0,
+        "message": "Nothing would happen really"
+    },
+    {
+        "energy": 500,
+        "message": "Would probably hurt if you got hit in the head with this one"
+    },
+    {
+        "energy": 10000,
+        "message": "This kind of object would burn up in the atmosphere while shatering all the windows in the area"
+    },
+    {
+        "energy": 50000,
+        "message": "Nothing really bad, but this would definetly make the news"
+    },
+    {
+        "energy": 75000,
+        "message": "This is the energy equivalent of me jumping from the Vilnius TV tower and hitting the ground below"
+    },
+    {
+        "energy": 100000,
+        "message": "This is going to leave a crater"
+    },
+    {
+        "energy": 200000,
+        "message": "Better hope this is not hitting the city where you live"
+    },
+    {
+        "energy": 420000,
+        "message": "Ask the dinosaurs x_x"
+    }
+]
