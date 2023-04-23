@@ -15,11 +15,11 @@ namespace StrongPointTechAssignment.Domain
             {
                 return KineticEnergyImpactToEarthLevels.None;
             }
-            else if (energyReleased < 1000)
+            else if (energyReleased < 10000000000)
             { 
                 return KineticEnergyImpactToEarthLevels.Minimal;
             }
-            else if (energyReleased > 1000 && energyReleased < 10000)
+            else if (energyReleased > 10000000000 && energyReleased < 100000000000)
             {
                 return KineticEnergyImpactToEarthLevels.Medium;
             }

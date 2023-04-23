@@ -11,9 +11,9 @@ namespace StrongPointTechAssignment.Tests
             new()
             {
                     { null, KineticEnergyImpactToEarthLevels.None },
-                    { 5, KineticEnergyImpactToEarthLevels.Minimal },
-                    { 5000, KineticEnergyImpactToEarthLevels.Medium },
-                    { 10000, KineticEnergyImpactToEarthLevels.High },
+                    { 90000, KineticEnergyImpactToEarthLevels.Minimal },
+                    { 10000000001, KineticEnergyImpactToEarthLevels.Medium },
+                    { 100000000005, KineticEnergyImpactToEarthLevels.High },
             };
 
         [Theory]

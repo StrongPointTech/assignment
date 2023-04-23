@@ -8,3 +8,8 @@ comment/note/whatever that would tell what would happen to Earth if that object 
 ## Notes and references
 - what matters most is the candidate's creativity and how he/she is able to write awsome, readable, structurised, testable code.
 - https://www.calculatorsoup.com/calculators/physics/kinetic.php
+
+## Assumptions
+- I've storing previous results in-memory.
+- I'm converting  "what would happen to Earth" statement into a level of impact using imaginary values.
+
