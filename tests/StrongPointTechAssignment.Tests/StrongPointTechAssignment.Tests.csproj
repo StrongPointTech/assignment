@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\StrongPointTechAssignment.Domain\StrongPointTechAssignment.Domain.csproj" />
+    <ProjectReference Include="..\..\src\StrongPointTechAssignment.Domain\StrongPointTechAssignment.Domain.csproj" />
   </ItemGroup>
 
 </Project>
