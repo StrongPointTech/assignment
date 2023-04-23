@@ -15,11 +15,13 @@
 
         <div class="mb-3">
             @Html.LabelFor(model=>model.Mass,"mass (m, kg)")
-            @Html.TextBoxFor(model => model.Mass)
+            @Html.TextBoxFor(model => model.Mass,  new { @Value = 1000, @required  = "required", @type = "number"})
+            @Html.ValidationMessageFor(model => model.Mass)
         </div>
         <div class="mb-3">
             @Html.LabelFor(model=>model.Velocity,"velocity (v, m/s)")
-            @Html.TextBoxFor(model => model.Velocity)
+            @Html.TextBoxFor(model => model.Velocity, new { @Value = 100, @required  = "required", @type = "number"})
+            @Html.ValidationMessageFor(model => model.Velocity)
         </div>
         <input type="submit" class="btn btn-primary " value="Calculate Kinetic Energy (KE)" />
     }
