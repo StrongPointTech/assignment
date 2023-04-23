@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model StrongPointTechAssignment.Web.Models.FormulaRequestModel
+
+<div>
+    <img src="https://i.ytimg.com/vi/D7LdQMS0Tgs/maxresdefault.jpg" style="width:20%;height:20%" class="img-thumbnail">
+    <p>Where KE is kinetic energy, m is mass and v is for velocity.</p>
+
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+    {
+        @Html.ValidationSummary() 
+        @Html.AntiForgeryToken()
+
+        <div class="mb-3">
+            @Html.LabelFor(model=>model.Mass,"mass (m)")
+            @Html.TextBoxFor(model => model.Mass)
+        </div>
+        <div class="mb-3">
+            @Html.LabelFor(model=>model.Velocity,"velocity (v)")
+            @Html.TextBoxFor(model => model.Velocity)
+        </div>
+        <input type="submit" class="btn btn-primary " value="Calculate" />
+    }
+</div>

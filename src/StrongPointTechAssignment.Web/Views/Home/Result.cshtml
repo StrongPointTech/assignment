@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model StrongPointTechAssignment.Web.Models.KineticEnergyResultModel
+
+<div class="text-center">
+    Result:
+    <h1 class="display-4">@Model.Result J</h1>
+    Impact to the Earth:
+    <h1 class="display-4">@Model.ImpactToEarthLevel.ToString()</h1>
+</div>

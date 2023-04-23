@@ -1,0 +1,33 @@
+﻿@using StrongPointTechAssignment.Domain.Models;
+
+@model List<CalculatorHistoryItem>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Timestamp</th>
+      <th scope="col">Formula</th>
+      <th scope="col">Mass</th>
+      <th scope="col">Velocity</th>
+      <th scope="col">Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        @{
+            var counter = 0;
+            foreach (var item in Model)
+            {
+                <th scope="row">@counter</th>
+                <td>@item.Timestamp.ToString()</td>
+                <td>@item.Formula.TextFormula</td>
+                <td>@item.Formula.Mass</td>
+                <td>@item.Formula.Velocity</td>
+                <td>@item.Result</td>
+                counter++;
+            }
+        }       
+    </tr>
+  </tbody>
+</table>
