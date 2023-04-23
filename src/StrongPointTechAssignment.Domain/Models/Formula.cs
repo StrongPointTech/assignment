@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace StrongPointTechAssignment.Domain.Models
+﻿namespace StrongPointTechAssignment.Domain.Models
 {
     public abstract class Formula
     {

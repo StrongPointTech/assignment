@@ -2,9 +2,7 @@
 using StrongPointTechAssignment.Domain;
 using StrongPointTechAssignment.Domain.Interfaces;
 using StrongPointTechAssignment.Domain.Models;
-using StrongPointTechAssignment.Domain.Services;
 using StrongPointTechAssignment.Web.Models;
-using System.Data;
 using System.Diagnostics;
 
 namespace StrongPointTechAssignment.Web.Controllers

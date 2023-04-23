@@ -1,5 +1,4 @@
 ﻿using StrongPointTechAssignment.Domain.Models;
-using System.ComponentModel.DataAnnotations;
 
 namespace StrongPointTechAssignment.Web.Models
 {
